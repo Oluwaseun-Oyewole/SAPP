@@ -79,11 +79,11 @@ export const Login = () => {
             <form onSubmit={submit}>
                 <div className="mb">
                 <label htmlFor=""> Email</label>
-                <InputField placeholder="johndoe@gmail.com" name="email"  type="email" required={true} onChange={handleChange}  icon={emailIcon} />
+                <InputField placeholder="johndoe@gmail.com" name="email"  type="email" required={true} onChange={handleChange}  icon={emailIcon}  value={formState.email}/>
                 </div>
                 <div className="mb-3">
                 <label htmlFor=""> Password</label>
-                <InputField placeholder="**********" type={show ? "text":"password"} name="password" onChange={handleChange} required={true} icon={openEye} onToggle={togglePassword}/>
+                <InputField placeholder="**********" type={show ? "text":"password"} name="password" onChange={handleChange} required={true} icon={openEye} onToggle={togglePassword} value={formState.password}/>
                 </div>
 
 

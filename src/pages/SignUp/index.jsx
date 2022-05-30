@@ -11,7 +11,7 @@ import openEye from "../../assets/icons/open-eye.svg"
 
 
 export const SignUp = () => {
-    const initialValue = { email: "", password: "", first_name:"", last_name:"", confirm_password:"s" };
+    const initialValue = { email: "", password: "", first_name:"", last_name:"", confirm_password:"" };
     const [formState, setFormState] = useState(initialValue);
     const [show,setShowPassword ] = useState(false)
     const [show2,setShowPassword2 ] = useState(false)
@@ -40,7 +40,8 @@ export const SignUp = () => {
       const { name, value } = e.target;
       const newState = { ...formState };
       newState[name] = value;
-      setFormState(newState);
+          setFormState(newState);
+        
     };
   
   
@@ -53,6 +54,7 @@ export const SignUp = () => {
       setLoading(false)
       setSuccess(true)
       clearForm();
+   
 
   } catch (error) {
       setError(true)
@@ -87,7 +89,7 @@ export const SignUp = () => {
                 <div className="lg:flex">
                     <div className="lg:w-1/2 w-full mr-3">
                     <label htmlFor="">First Name</label>
-                <InputField placeholder="john" name="first_name"  type="text" required={true} onChange={handleChange} icon={userIcon}  value={fornState.first_name}/>
+                <InputField placeholder="john" name="first_name"  type="text" required={true} onChange={handleChange} icon={userIcon}  value={formState.first_name}/>
                     </div>
 
                     <div className="lg:w-1/2 w-full mr-3">
